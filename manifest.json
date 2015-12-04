@@ -1,0 +1,16 @@
+{
+  "name": "Ledger Blue Slack extension",
+  "description": "Encrypt a slack chat room using the Blue API",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["https://*.slack.com/*"],
+      "js": ["jquery-2.1.4.min.js", "bridge.js"]
+    }
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "web_accessible_resources": [ "inject.js" ],
+  "manifest_version": 2
+}
